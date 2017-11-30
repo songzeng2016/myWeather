@@ -1,19 +1,21 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
+const [HOST, KEY] = ['https://free-api.heweather.com/s6/weather/', 'df1ccd019dd0493a92fa681497b8d490']
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+class wc {
+  constructor() {
+    this.host = HOST
+    this.key = KEY
+  }
+
+  get(type, data, success) {
+    data.key = this.key
+    wx.request({
+      url: this.host + type,
+      data,
+      success: res => {
+        typeof success === 'function' && success(res)
+      }
+    })
+  }
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
-module.exports = {
-  formatTime: formatTime
-}
+export default wc

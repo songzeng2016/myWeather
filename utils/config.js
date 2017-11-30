@@ -1,0 +1,1 @@
+const [HOST, KEY] = ["https://api.heweather.com/s6/weather/", "df1ccd019dd0493a92fa681497b8d490"]

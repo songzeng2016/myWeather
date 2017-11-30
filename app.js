@@ -1,4 +1,6 @@
 //app.js
+import wc from './utils/util.js'
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +37,6 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  wc: new wc()
 })
