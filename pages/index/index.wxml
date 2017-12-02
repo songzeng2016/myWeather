@@ -1,2 +1,16 @@
 <!--index.wxml-->
+ <!-- <image class='bgImg' src='/image/bgImg.jpg'></image>  -->
 
+<view>
+
+  <view class='future-wrapper'>
+    <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
+      <text>{{item.date}}</text>
+      <image src='/image/{{item.cond_code_d}}.png'></image>
+      <view>
+        <text>{{item.tmp_max}}</text>
+        <text>{{item.tmp_min}}</text>
+      </view>
+    </view>
+  </view>
+</view>

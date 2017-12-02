@@ -7,6 +7,7 @@ Page({
   data: {
   },
   onLoad: function () {
+    const that = this
 
     wx.getLocation({
       success: function (res) {
@@ -15,8 +16,11 @@ Page({
         let getData = {
           location: res.latitude + ',' + res.longitude
         }
-        wc.get('forecast', getData, res => {
-
+        wc.get('forecast', getData, (res) => {
+          console.log(res)
+          that.setData({
+            futureList: res.data.HeWeather6[0].daily_forecast
+          })
         })
       },
     })
