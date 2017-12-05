@@ -1,15 +1,24 @@
 <!--index.wxml-->
- <!-- <image class='bgImg' src='/image/bgImg.jpg'></image>  -->
+  <image class='bgImg' src='/image/bgImg.jpg'></image>  
 
-<view>
+<view class='weather-wrapper'>
 
   <view class='future-wrapper'>
     <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
-      <text>{{item.date}}</text>
-      <image src='/image/{{item.cond_code_d}}.png'></image>
-      <view>
-        <text>{{item.tmp_max}}</text>
-        <text>{{item.tmp_min}}</text>
+      <text class='day'>{{weeks[item.day]}}</text>
+      <image class='icon' src='/image/{{item.cond_code_d}}.png'></image>
+      <view class='temp-wrapper'>
+        <text class='hTemp'>{{item.tmp_max}}</text>
+        <text class='lTemp'>{{item.tmp_min}}</text>
+      </view>
+    </view>
+
+    <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
+      <text class='day'>{{weeks[item.day]}}</text>
+      <image class='icon' src='/image/{{item.cond_code_d}}.png'></image>
+      <view class='temp-wrapper'>
+        <text class='hTemp'>{{item.tmp_max}}</text>
+        <text class='lTemp'>{{item.tmp_min}}</text>
       </view>
     </view>
   </view>

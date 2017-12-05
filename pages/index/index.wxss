@@ -1,6 +1,52 @@
 /**index.wxss**/
 
-page, .bgImg {
+page, .bgImg, .weather-wrapper {
   width: 100%;
   height: 100%;
+}
+
+.bgImg, .weather-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.future-wrapper {
+  width: 100%;
+  padding: 32rpx 40rpx 20rpx;
+}
+
+.future-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25rpx;
+}
+
+.future-list .day {
+  color: white;
+  font-size: 40rpx;
+}
+
+.future-list .icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.future-list .temp-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 125rpx;
+  color: white;
+  font-size: 40rpx;
+}
+
+.future-list .hTemp {
+  display: inline-block;
+  width: 40rpx;
+  text-align: right;
+}
+
+.future-list .lTemp {
+  color: #a5c8e1;
 }
