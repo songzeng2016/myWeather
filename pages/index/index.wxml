@@ -28,4 +28,9 @@
       </view>
     </view>
   </view>
+
+  <view class='bottom'>
+      <view>更新时间：{{update.loc}}</view>
+  </view>
+
 </view>

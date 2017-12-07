@@ -25,11 +25,10 @@ Page({
     }
 
     wc.get('', getData, (res) => {
-      console.log(res)
+      console.log(res.data)
 
       let data = res.data.HeWeather6[0]
-      let basic = data.basic
-      let now = data.now
+      let { basic, now, update } = data
       let futureList = data.daily_forecast
 
       for (let i in futureList) {
@@ -39,7 +38,8 @@ Page({
       that.setData({
         basic,
         now,
-        futureList
+        futureList,
+        update
       })
     })
   }
