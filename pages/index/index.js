@@ -14,20 +14,33 @@ Page({
       success: function (res) {
         console.log(res)
 
-        let getData = {
-          location: res.latitude + ',' + res.longitude
-        }
-        wc.get('forecast', getData, (res) => {
-          console.log(res)
-          let futureList = res.data.HeWeather6[0].daily_forecast
-          for (let i in futureList) {
-            futureList[i].day = new Date(futureList[i].date).getDay()
-          }
-          that.setData({
-            futureList
-          })
-        })
+        that.getWeather(res)
       },
+    })
+  },
+  getWeather: function (res) {
+    const that = this
+    let getData = {
+      location: res.latitude + ',' + res.longitude
+    }
+
+    wc.get('', getData, (res) => {
+      console.log(res)
+
+      let data = res.data.HeWeather6[0]
+      let basic = data.basic
+      let now = data.now
+      let futureList = data.daily_forecast
+
+      for (let i in futureList) {
+        futureList[i].day = new Date(futureList[i].date).getDay()
+      }
+
+      that.setData({
+        basic,
+        now,
+        futureList
+      })
     })
   }
 })

@@ -5,11 +5,45 @@ page, .bgImg, .weather-wrapper {
   height: 100%;
 }
 
+page {
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .bgImg, .weather-wrapper {
   position: absolute;
   top: 0;
   left: 0;
 }
+
+.weather-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 当前天气 */
+
+.now-wrapper {
+  width: 100%;
+  padding: 60rpx 0;
+  text-align: center;
+}
+
+.now-wrapper .area {
+  font-size: 60rpx;
+}
+
+.now-wrapper .txt {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.now-wrapper .tmp {
+  margin-top: 20rpx;
+  font-size: 120rpx;
+  font-weight: 300;
+}
+
+/* 未来 7 天 */
 
 .future-wrapper {
   width: 100%;
@@ -24,7 +58,6 @@ page, .bgImg, .weather-wrapper {
 }
 
 .future-list .day {
-  color: white;
   font-size: 40rpx;
 }
 
@@ -37,7 +70,6 @@ page, .bgImg, .weather-wrapper {
   display: flex;
   justify-content: space-between;
   width: 125rpx;
-  color: white;
   font-size: 40rpx;
 }
 
