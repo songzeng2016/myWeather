@@ -19,18 +19,18 @@
       </view>
     </view>
 
-    <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
+    <!-- <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
       <text class='day'>{{weeks[item.day]}}</text>
       <image class='icon' src='/image/{{item.cond_code_d}}.png'></image>
       <view class='temp-wrapper'>
         <text class='hTemp'>{{item.tmp_max}}</text>
         <text class='lTemp'>{{item.tmp_min}}</text>
       </view>
-    </view>
+    </view> -->
   </view>
 
   <view class='bottom'>
-      <view>更新时间：{{update.loc}}</view>
+    <view>更新时间：{{update.loc}}</view>
   </view>
 
 </view>

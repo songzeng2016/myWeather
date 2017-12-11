@@ -42,5 +42,8 @@ Page({
         update
       })
     })
+  },
+  onShareAppMessage: function() {
+    
   }
 })
