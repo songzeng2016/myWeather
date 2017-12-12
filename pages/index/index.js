@@ -29,21 +29,27 @@ Page({
 
       let data = res.data.HeWeather6[0]
       let { basic, now, update } = data
+      let hourList = data.hourly
       let futureList = data.daily_forecast
 
       for (let i in futureList) {
         futureList[i].day = new Date(futureList[i].date).getDay()
       }
 
+      for (let i in hourList) {
+        hourList[i].hour = hourList[i].time.split(' ')[1]
+      }
+
       that.setData({
         basic,
         now,
+        hourList,
         futureList,
         update
       })
     })
   },
-  onShareAppMessage: function() {
-    
+  onShareAppMessage: function () {
+
   }
 })

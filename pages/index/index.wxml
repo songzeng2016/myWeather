@@ -9,6 +9,14 @@
     <view class='tmp'>{{now.tmp}}°</view>
   </view>
 
+  <scroll-view class='hour-wrapper' scroll-x>
+    <view class='hour-list' wx:for='{{hourList}}' wx:key='*hourList'>
+      <view>{{item.hour}}</view>
+      <image class='icon' src='/image/{{item.cond_code}}.png'></image>
+      <view>{{item.tmp}}°</view>
+    </view>
+  </scroll-view>
+
   <view class='future-wrapper'>
     <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
       <text class='day'>{{weeks[item.day]}}</text>
@@ -18,19 +26,11 @@
         <text class='lTemp'>{{item.tmp_min}}</text>
       </view>
     </view>
-
-    <!-- <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
-      <text class='day'>{{weeks[item.day]}}</text>
-      <image class='icon' src='/image/{{item.cond_code_d}}.png'></image>
-      <view class='temp-wrapper'>
-        <text class='hTemp'>{{item.tmp_max}}</text>
-        <text class='lTemp'>{{item.tmp_min}}</text>
-      </view>
-    </view> -->
   </view>
 
   <view class='bottom'>
     <view>更新时间：{{update.loc}}</view>
+    <!-- <view>天气来源：和风天气</view> -->
   </view>
 
 </view>
