@@ -16,6 +16,20 @@ class wc {
       }
     })
   }
+
+  getTime(time) {
+    if (!time) {
+      return
+    }
+
+    time = parseInt(time)
+
+    if (time > 12) {
+      return '下午' + (time - 12) + '时'
+    } else {
+      return '上午' + time + '时'
+    }
+  }
 }
 
 export default wc

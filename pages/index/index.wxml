@@ -9,9 +9,21 @@
     <view class='tmp'>{{now.tmp}}°</view>
   </view>
 
+  <view class='future-wrapper'>
+    <view class='future-list' wx:for='{{todayList}}' wx:key='*todayList'>
+      <text class='day'>{{weeks[item.day]}}</text>
+      <text class='today'>今天</text>
+      <!-- <image class='icon' src='/image/{{item.cond_code_d}}.png'></image> -->
+      <view class='temp-wrapper'>
+        <text class='hTemp'>{{item.tmp_max}}</text>
+        <text class='lTemp'>{{item.tmp_min}}</text>
+      </view>
+    </view>
+  </view>
+
   <scroll-view class='hour-wrapper' scroll-x>
     <view class='hour-list' wx:for='{{hourList}}' wx:key='*hourList'>
-      <view>{{item.hour}}</view>
+      <view class='time'>{{item.hour}}</view>
       <image class='icon' src='/image/{{item.cond_code}}.png'></image>
       <view>{{item.tmp}}°</view>
     </view>

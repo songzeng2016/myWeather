@@ -54,16 +54,20 @@ page {
 .hour-wrapper {
   width: 100%;
   height: 220rpx;
-  padding: 15rpx 0;
+  padding-top: 30rpx;
   white-space: nowrap;
   border-top: 1px solid #c8d6e1;
+  border-bottom: 1px solid #c8d6e1;
 }
 
 .hour-list {
   display: inline-block;
   width: 145rpx;
-  height: 100%;
   text-align: center;
+}
+
+.hour-list .time {
+  font-size: 32rpx;
 }
 
 .hour-list .icon {
@@ -76,8 +80,8 @@ page {
 
 .future-wrapper {
   width: 100%;
-  padding: 0rpx 40rpx;
-  border-top: 1px solid #c8d6e1;
+  padding: 0rpx 40rpx 10rpx;
+  /* border-top: 1px solid #c8d6e1; */
 }
 
 .future-list {
@@ -85,6 +89,13 @@ page {
   justify-content: space-between;
   width: 100%;
   margin-top: 15rpx;
+}
+
+.future-list .today {
+  flex: 1;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
 }
 
 .future-list .day {
