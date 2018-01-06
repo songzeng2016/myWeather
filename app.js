@@ -1,8 +1,16 @@
 //app.js
 import wc from './utils/util.js'
 
+var fundebug = require('./utils/fundebug.0.0.3.min.js');
+fundebug.apikey = '8dcb509dfd4003112e500a966607abd4f71a45eda39578baa888575aede31152';
+fundebug.silent = false;
+fundebug.releaseStage = "production";
+
 App({
   onLaunch: function () {
+    // 监控错误
+    // throw new Error('Test')
+
     // // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())

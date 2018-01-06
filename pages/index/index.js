@@ -35,6 +35,7 @@ Page({
 
           }
         })
+        throw new Error('用户未同意授权获取地理位置');
       }
     })
   },
@@ -46,6 +47,10 @@ Page({
 
     wc.get('', getData, (res) => {
       // console.log(res.data)
+
+      if (!res.data.HeWeather6[0]) {
+        throw new Error('天气数据获取失败');
+      }
 
       let data = res.data.HeWeather6[0]
       let { basic, now, update } = data
