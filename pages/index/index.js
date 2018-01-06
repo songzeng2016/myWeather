@@ -12,7 +12,7 @@ Page({
 
     wx.getLocation({
       success: function (res) {
-        console.log(res)
+        // console.log(res)
 
         that.getWeather(res)
       },
@@ -45,11 +45,11 @@ Page({
     }
 
     wc.get('', getData, (res) => {
-      console.log(res.data)
+      // console.log(res.data)
 
       let data = res.data.HeWeather6[0]
       let { basic, now, update } = data
-      let hourList = data.hourly
+      let hourList = data.hourly || []
       let futureList = data.daily_forecast
 
       for (let i in futureList) {
