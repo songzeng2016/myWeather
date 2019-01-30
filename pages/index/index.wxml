@@ -30,6 +30,7 @@
   </scroll-view>
 
   <view class='future-wrapper'>
+    <ad unit-id="adunit-53e698a74b9be4a4"></ad>
     <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
       <text class='day'>{{weeks[item.day]}}</text>
       <image class='icon' src='/image/{{item.cond_code_d}}.png'></image>

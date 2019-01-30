@@ -23,6 +23,7 @@ page {
   position: absolute;
   width: 100%;
   min-height: 100%;
+  padding-bottom: 88rpx;
   background: rgba(0, 0, 0, 0.3);
 }
 
