@@ -2,6 +2,11 @@
   "pages":[
     "pages/index/index"
   ],
+  "permission": {
+    "scope.userLocation": {
+        "desc": "您的位置将用于获取天气信息"
+    }
+  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

@@ -4,7 +4,7 @@
 <view class='weather-wrapper'>
 
   <view class='now-wrapper'>
-    <view class='area'>{{basic.admin_area}}</view>
+    <view class='area'>{{basic.location || basic.parent_city || basic.admin_area}}</view>
     <view class='txt'>{{now.cond_txt}}</view>
     <view class='tmp'>{{now.tmp}}°</view>
   </view>
