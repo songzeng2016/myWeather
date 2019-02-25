@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "昨日天气",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#508283",
+    "enablePullDownRefresh": false
+}

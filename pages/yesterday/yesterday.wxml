@@ -5,15 +5,14 @@
 
   <view class='now-wrapper'>
     <view class='area'>{{basic.location || basic.parent_city || basic.admin_area}}</view>
-    <view class='txt'>{{now.cond_txt}}</view>
-    <view class='tmp'>{{now.tmp}}°</view>
-    <view class='yesterday' bindtap='navToYesterday'>查看昨日天气</view>
+    <!-- <view class='txt'>{{now.cond_txt}}</view> -->
+    <!-- <view class='tmp'>{{now.tmp}}°</view> -->
   </view>
 
   <view class='future-wrapper'>
     <view class='future-list' wx:for='{{todayList}}' wx:key='*todayList'>
       <text class='day'>{{weeks[item.day]}}</text>
-      <text class='today'>今天</text>
+      <text class='today'>昨日</text>
       <!-- <image class='icon' src='/image/{{item.cond_code_d}}.png'></image> -->
       <view class='temp-wrapper'>
         <text class='hTemp'>{{item.tmp_max}}</text>
@@ -30,7 +29,11 @@
     </view>
   </scroll-view>
 
-  <view class='future-wrapper'>
+  <ad unit-id="adunit-e68c52f155b0e4c8"></ad>
+
+  <navigator class='bottom' url='/pages/index/index' open-type='redirect'>返回首页</navigator>
+
+  <!-- <view class='future-wrapper'>
     <ad unit-id="adunit-53e698a74b9be4a4"></ad>
     <view class='future-list' wx:for='{{futureList}}' wx:key='*futureList'>
       <text class='day'>{{weeks[item.day]}}</text>
@@ -40,11 +43,10 @@
         <text class='lTemp'>{{item.tmp_min}}</text>
       </view>
     </view>
-  </view>
+  </view> -->
 
-  <view class='bottom'>
+  <!-- <view class='bottom'>
     <view>更新时间：{{update.loc}}</view>
-    <!-- <view>天气来源：和风天气</view> -->
-  </view>
+  </view> -->
 
 </view>

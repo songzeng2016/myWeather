@@ -1,15 +1,17 @@
-const [HOST, KEY] = ['https://free-api.heweather.com/s6/weather/', 'df1ccd019dd0493a92fa681497b8d490']
+const [HOST, KEY] = ['https://free-api.heweather.com/s6/weather', 'df1ccd019dd0493a92fa681497b8d490']
+const payHost = 'https://api.heweather.net/s6/weather'
 
 class wc {
   constructor() {
     this.host = HOST
     this.key = KEY
+    this.payHost = payHost
   }
 
-  get(type, data, success) {
+  get(type, data, success, isPay) {
     data.key = this.key
     wx.request({
-      url: this.host + type,
+      url: (isPay ? this.payHost : this.host) + type,
       data,
       success: res => {
         typeof success === 'function' && success(res)

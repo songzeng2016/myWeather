@@ -83,7 +83,26 @@ Page({
         futureList,
         update
       })
+
+    //   this.getHistory(basic.cid);
     })
+  },
+  // 获取历史天气
+  getHistory(location) {
+    const that = this
+    let getData = {
+      location,
+      date: '2019-02-24',
+    };
+
+    wc.get('/historical', getData, (res) => {
+
+    }, true);
+  },
+  navToYesterday() {
+      wx.navigateTo({
+          url: '/pages/yesterday/yesterday',
+      });
   },
   onShareAppMessage: function () {
 
