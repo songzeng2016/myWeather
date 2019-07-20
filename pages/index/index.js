@@ -85,7 +85,7 @@ Page({
       })
 
     //   this.getHistory(basic.cid);
-    })
+    }, true)
   },
   // 获取历史天气
   getHistory(location) {
